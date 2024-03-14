@@ -14,8 +14,8 @@ spec:
       targetPort: {{ .service.port }}
       protocol: TCP
       name: http
-    - port: 38412
-      targetPort: 38412
+    - port: 30500
+      targetPort: 30500
       protocol: SCTP
       name: sctp
   selector:
