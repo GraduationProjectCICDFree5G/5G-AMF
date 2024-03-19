@@ -14,7 +14,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "free5gc-amf.fullname" $ }}-service
+  name: {{ .service.name }}
   labels:
     {{- include "free5gc-amf.labels" $ | nindent 4 }}
     project: {{ $.Values.global.projectName }}
@@ -37,7 +37,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "free5gc-amf.fullname" $ }}-{{ $.Values.global.amf.service.ngap.name }}
+  name: {{ $.Values.global.amf.service.ngap.name }}
   labels:
     project: {{ $.Values.global.projectName }}
     nf: {{ .name }}
