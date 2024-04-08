@@ -63,7 +63,7 @@ amf:
   name: amf
   replicaCount: 1
   image:
-    name: towards5gs/free5gc-amf
+    name: 5ggraduationproject/5g-amf
     pullPolicy: Always
   service:
     type: ClusterIP
